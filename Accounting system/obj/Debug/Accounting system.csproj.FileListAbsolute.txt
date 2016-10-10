@@ -17,3 +17,6 @@ C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accountin
 C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.Admin.AddUser.resources
 C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.Admin.BlockUser.resources
 C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.User.ActionsWithTheGoods.resources
+E:\Gitab Project\AccountingSystem\Accounting system\bin\Debug\Accounting system.exe.config
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting system.exe
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting system.pdb
