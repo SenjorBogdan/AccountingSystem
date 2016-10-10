@@ -1,0 +1,19 @@
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\bin\Debug\Accounting system.exe.config
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\bin\Debug\Accounting system.exe
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\bin\Debug\Accounting system.pdb
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting system.csprojResolveAssemblyReference.cache
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.Admin.AdminLogin.resources
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.Login.resources
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.Properties.Resources.resources
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.User.UserLogin.resources
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting system.csproj.GenerateResource.Cache
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting system.exe
+c:\users\orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting system.pdb
+C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\bin\Debug\Database.mdf
+C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\bin\Debug\Database_log.ldf
+C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.User.Registration.resources
+C:\Users\Orion\documents\visual studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.Admin.AddGoods.resources
+C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.Admin.DeleteGoods.resources
+C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.Admin.AddUser.resources
+C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.Admin.BlockUser.resources
+C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\obj\Debug\Accounting_system.User.ActionsWithTheGoods.resources
