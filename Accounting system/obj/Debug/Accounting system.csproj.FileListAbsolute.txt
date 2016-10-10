@@ -20,3 +20,19 @@ C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accountin
 E:\Gitab Project\AccountingSystem\Accounting system\bin\Debug\Accounting system.exe.config
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting system.exe
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting system.pdb
+E:\Gitab Project\AccountingSystem\Accounting system\bin\Debug\Database.mdf
+E:\Gitab Project\AccountingSystem\Accounting system\bin\Debug\Database_log.ldf
+E:\Gitab Project\AccountingSystem\Accounting system\bin\Debug\Accounting system.exe
+E:\Gitab Project\AccountingSystem\Accounting system\bin\Debug\Accounting system.pdb
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting system.csprojResolveAssemblyReference.cache
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Admin.AddGoods.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Admin.AddUser.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Admin.AdminLogin.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Admin.BlockUser.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Admin.DeleteGoods.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Login.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Properties.Resources.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.User.ActionsWithTheGoods.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.User.Registration.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.User.UserLogin.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting system.csproj.GenerateResource.Cache

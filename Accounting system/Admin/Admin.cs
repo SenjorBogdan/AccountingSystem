@@ -11,7 +11,7 @@ namespace Accounting_system.Admin
     class Admin
     {
         // Прописати свій connectionstring
-        public static string connectionstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Orion\Documents\Visual Studio 2015\Projects\Accounting system\Accounting system\Database.mdf;Integrated Security = True;";
+        public static string connectionstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Gitab Project\AccountingSystem\Accounting system\Database.mdf;Integrated Security=True;";
 
         public void AddUser(string id)
         {
