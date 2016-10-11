@@ -37,3 +37,5 @@ E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting system.csproj.GenerateResource.Cache
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.User.ViewProduct.resources
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.User.OrderProduct.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.User.ReturnGoods.resources
+E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.User.HistoryShopping.resources

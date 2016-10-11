@@ -42,11 +42,15 @@ namespace Accounting_system.User
         private void btnReturnGoods_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ReturnGoods returnGoods = new ReturnGoods();
+            returnGoods.Show();
         }
 
         private void btnHistoryShopping_Click(object sender, EventArgs e)
         {
             this.Hide();
+            HistoryShopping historyShopping = new HistoryShopping();
+            historyShopping.Show();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {

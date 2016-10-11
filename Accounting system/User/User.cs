@@ -59,16 +59,37 @@ namespace Accounting_system.User
             reader = cmd1.ExecuteReader();
             connect.Close();
 
-            MessageBox.Show("Успішна реєстрація");
+            //  Історія покупок
+            SqlCommand cmd2 = new SqlCommand("INSERT INTO HistoryShopping VALUES (@Name,@Quantity)", connect);
+
+            cmd2.Parameters.Add(new SqlParameter("@Name", name));
+            cmd2.Parameters.Add(new SqlParameter("@Quantity", int.Parse(quantity)));
+
+            connect.Open();
+            reader = cmd2.ExecuteReader();
+            connect.Close();
+
+            MessageBox.Show("Замовлення успішно виконане");
 
         }
-        public void ReturnGoods()
+        public void ReturnGoods(string id)
         {
-
+            SqlConnection connect = new SqlConnection(Admin.Admin.connectionstring);
+            SqlCommand cmd = new SqlCommand("DELETE GoodsUser WHERE Id = @id", connect);
+            cmd.Parameters.Add(new SqlParameter("@id", int.Parse(id)));
+            connect.Open();
+            cmd.ExecuteNonQuery();
+            connect.Close();
+            MessageBox.Show("Товар успішно повернено");
         }
         public void HistoryShopping()
         {
-
+            SqlConnection connect = new SqlConnection(Admin.Admin.connectionstring);
+            SqlCommand cmd = new SqlCommand("DELETE FROM HistoryShopping", connect);
+            connect.Open();
+            cmd.ExecuteNonQuery();
+            connect.Close();
+            MessageBox.Show("Історія успішно очищена");
         }
     }
 }
