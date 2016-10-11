@@ -24,11 +24,29 @@ namespace Accounting_system.User
             registration.Show();
         }
 
-        private void btnControlPanel_Click(object sender, EventArgs e)
+
+        private void btnViewProduct_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ActionsWithTheGoods actionsWithTheGoods = new ActionsWithTheGoods();
-            actionsWithTheGoods.Show();
+            ViewProduct viewProduct = new ViewProduct();
+            viewProduct.Show();
+        }
+
+        private void btnOrderProduct_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OrderProduct orderProduct = new OrderProduct();
+            orderProduct.Show();
+        }
+
+        private void btnReturnGoods_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnHistoryShopping_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {

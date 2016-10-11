@@ -30,8 +30,10 @@
         {
             this.btnExit = new System.Windows.Forms.Button();
             this.btnRegistration = new System.Windows.Forms.Button();
-            this.btnControlPanel = new System.Windows.Forms.Button();
-            this.btnSignIn = new System.Windows.Forms.Button();
+            this.btnViewProduct = new System.Windows.Forms.Button();
+            this.btnOrderProduct = new System.Windows.Forms.Button();
+            this.btnReturnGoods = new System.Windows.Forms.Button();
+            this.btnHistoryShopping = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -46,40 +48,63 @@
             // 
             // btnRegistration
             // 
-            this.btnRegistration.Location = new System.Drawing.Point(47, 15);
+            this.btnRegistration.Location = new System.Drawing.Point(36, 12);
             this.btnRegistration.Name = "btnRegistration";
-            this.btnRegistration.Size = new System.Drawing.Size(241, 70);
+            this.btnRegistration.Size = new System.Drawing.Size(241, 29);
             this.btnRegistration.TabIndex = 6;
             this.btnRegistration.Text = "Зареєструватися";
             this.btnRegistration.UseVisualStyleBackColor = true;
             this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
             // 
-            // btnControlPanel
+            // btnViewProduct
             // 
-            this.btnControlPanel.Location = new System.Drawing.Point(47, 99);
-            this.btnControlPanel.Name = "btnControlPanel";
-            this.btnControlPanel.Size = new System.Drawing.Size(241, 79);
-            this.btnControlPanel.TabIndex = 12;
-            this.btnControlPanel.Text = "Панель керування";
-            this.btnControlPanel.UseVisualStyleBackColor = true;
-            this.btnControlPanel.Click += new System.EventHandler(this.btnControlPanel_Click);
+            this.btnViewProduct.Location = new System.Drawing.Point(36, 59);
+            this.btnViewProduct.Name = "btnViewProduct";
+            this.btnViewProduct.Size = new System.Drawing.Size(241, 29);
+            this.btnViewProduct.TabIndex = 12;
+            this.btnViewProduct.Text = "Переглянути товар";
+            this.btnViewProduct.UseVisualStyleBackColor = true;
+            this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
             // 
-            // btnSignIn
+            // btnOrderProduct
             // 
-            this.btnSignIn.Location = new System.Drawing.Point(47, 192);
-            this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(241, 70);
-            this.btnSignIn.TabIndex = 13;
-            this.btnSignIn.Text = "Увійти";
-            this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnOrderProduct.Location = new System.Drawing.Point(36, 100);
+            this.btnOrderProduct.Name = "btnOrderProduct";
+            this.btnOrderProduct.Size = new System.Drawing.Size(241, 29);
+            this.btnOrderProduct.TabIndex = 13;
+            this.btnOrderProduct.Text = "Замовити товар";
+            this.btnOrderProduct.UseVisualStyleBackColor = true;
+            this.btnOrderProduct.Click += new System.EventHandler(this.btnOrderProduct_Click);
+            // 
+            // btnReturnGoods
+            // 
+            this.btnReturnGoods.Location = new System.Drawing.Point(36, 139);
+            this.btnReturnGoods.Name = "btnReturnGoods";
+            this.btnReturnGoods.Size = new System.Drawing.Size(241, 29);
+            this.btnReturnGoods.TabIndex = 14;
+            this.btnReturnGoods.Text = "Повернути товар";
+            this.btnReturnGoods.UseVisualStyleBackColor = true;
+            this.btnReturnGoods.Click += new System.EventHandler(this.btnReturnGoods_Click);
+            // 
+            // btnHistoryShopping
+            // 
+            this.btnHistoryShopping.Location = new System.Drawing.Point(36, 182);
+            this.btnHistoryShopping.Name = "btnHistoryShopping";
+            this.btnHistoryShopping.Size = new System.Drawing.Size(241, 29);
+            this.btnHistoryShopping.TabIndex = 15;
+            this.btnHistoryShopping.Text = "Переглянути історію покупок";
+            this.btnHistoryShopping.UseVisualStyleBackColor = true;
+            this.btnHistoryShopping.Click += new System.EventHandler(this.btnHistoryShopping_Click);
             // 
             // UserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 319);
-            this.Controls.Add(this.btnSignIn);
-            this.Controls.Add(this.btnControlPanel);
+            this.Controls.Add(this.btnHistoryShopping);
+            this.Controls.Add(this.btnReturnGoods);
+            this.Controls.Add(this.btnOrderProduct);
+            this.Controls.Add(this.btnViewProduct);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRegistration);
             this.Name = "UserLogin";
@@ -92,7 +117,9 @@
 
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnRegistration;
-        private System.Windows.Forms.Button btnControlPanel;
-        private System.Windows.Forms.Button btnSignIn;
+        private System.Windows.Forms.Button btnViewProduct;
+        private System.Windows.Forms.Button btnOrderProduct;
+        private System.Windows.Forms.Button btnReturnGoods;
+        private System.Windows.Forms.Button btnHistoryShopping;
     }
 }
