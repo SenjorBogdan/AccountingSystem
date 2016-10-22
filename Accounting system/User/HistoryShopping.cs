@@ -26,8 +26,8 @@ namespace Accounting_system.User
 
         private void btnClearHistory_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.HistoryShopping();
+            CRUD crud = new CRUD();
+            crud.HistoryShopping();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {

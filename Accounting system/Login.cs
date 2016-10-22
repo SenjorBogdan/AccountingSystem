@@ -17,18 +17,17 @@ namespace Accounting_system
             InitializeComponent();
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Admin.AdminLogin adminLogin = new Admin.AdminLogin();
-            adminLogin.Show();
+            CRUD crud = new CRUD();
+            crud.Ligin(txtLogin.Text,txtPassword.Text);
         }
 
-        private void btnUser_Click(object sender, EventArgs e)
+        private void btnRegistration_Click(object sender, EventArgs e)
         {
             this.Hide();
-            User.UserLogin userLogin = new User.UserLogin();
-            userLogin.Show();
+            User.RegistrationUser registration = new User.RegistrationUser();
+            registration.Show();
         }
     }
 }

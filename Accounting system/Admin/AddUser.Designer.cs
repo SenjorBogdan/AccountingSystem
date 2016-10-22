@@ -33,32 +33,31 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
-            this.dataBaseUser = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.userBaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet1 = new Accounting_system.DatabaseDataSet1();
             this.userBaseTableAdapter = new Accounting_system.DatabaseDataSet1TableAdapters.UserBaseTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseUser)).BeginInit();
+            this.privilegeCheckBox = new System.Windows.Forms.CheckBox();
+            this.statusCheckBox = new System.Windows.Forms.CheckBox();
+            this.btnAddPrivileges = new System.Windows.Forms.Button();
+            this.RefreshButton = new System.Windows.Forms.Button();
+            this.baseUserRichTextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.userBaseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddUser
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(79, 209);
+            this.btnAddUser.Location = new System.Drawing.Point(137, 185);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(75, 23);
             this.btnAddUser.TabIndex = 0;
             this.btnAddUser.Text = "Добавити";
             this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(79, 405);
+            this.btnExit.Location = new System.Drawing.Point(135, 418);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 1;
@@ -68,7 +67,7 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(66, 170);
+            this.txtId.Location = new System.Drawing.Point(122, 108);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 2;
@@ -76,51 +75,11 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(107, 154);
+            this.lblId.Location = new System.Drawing.Point(133, 92);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(18, 13);
+            this.lblId.Size = new System.Drawing.Size(85, 13);
             this.lblId.TabIndex = 4;
-            this.lblId.Text = "ID";
-            // 
-            // dataBaseUser
-            // 
-            this.dataBaseUser.AutoGenerateColumns = false;
-            this.dataBaseUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataBaseUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.statusDataGridViewCheckBoxColumn});
-            this.dataBaseUser.DataSource = this.userBaseBindingSource;
-            this.dataBaseUser.Location = new System.Drawing.Point(247, 12);
-            this.dataBaseUser.Name = "dataBaseUser";
-            this.dataBaseUser.Size = new System.Drawing.Size(423, 429);
-            this.dataBaseUser.TabIndex = 6;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // statusDataGridViewCheckBoxColumn
-            // 
-            this.statusDataGridViewCheckBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewCheckBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewCheckBoxColumn.Name = "statusDataGridViewCheckBoxColumn";
+            this.lblId.Text = "ID Користувача";
             // 
             // userBaseBindingSource
             // 
@@ -136,20 +95,70 @@
             // 
             this.userBaseTableAdapter.ClearBeforeFill = true;
             // 
+            // privilegeCheckBox
+            // 
+            this.privilegeCheckBox.AutoSize = true;
+            this.privilegeCheckBox.Location = new System.Drawing.Point(102, 264);
+            this.privilegeCheckBox.Name = "privilegeCheckBox";
+            this.privilegeCheckBox.Size = new System.Drawing.Size(155, 17);
+            this.privilegeCheckBox.TabIndex = 10;
+            this.privilegeCheckBox.Text = "Дати/Забрати привілегію";
+            this.privilegeCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // statusCheckBox
+            // 
+            this.statusCheckBox.AutoSize = true;
+            this.statusCheckBox.Location = new System.Drawing.Point(104, 162);
+            this.statusCheckBox.Name = "statusCheckBox";
+            this.statusCheckBox.Size = new System.Drawing.Size(135, 17);
+            this.statusCheckBox.TabIndex = 11;
+            this.statusCheckBox.Text = "Дати/Забрати статус";
+            this.statusCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // btnAddPrivileges
+            // 
+            this.btnAddPrivileges.Location = new System.Drawing.Point(135, 287);
+            this.btnAddPrivileges.Name = "btnAddPrivileges";
+            this.btnAddPrivileges.Size = new System.Drawing.Size(75, 23);
+            this.btnAddPrivileges.TabIndex = 7;
+            this.btnAddPrivileges.Text = "Добавити";
+            this.btnAddPrivileges.UseVisualStyleBackColor = true;
+            this.btnAddPrivileges.Click += new System.EventHandler(this.AddPrivileges_Click);
+            // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Location = new System.Drawing.Point(388, 418);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(75, 23);
+            this.RefreshButton.TabIndex = 13;
+            this.RefreshButton.Text = "Обновити";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // baseUserRichTextBox
+            // 
+            this.baseUserRichTextBox.Location = new System.Drawing.Point(388, 43);
+            this.baseUserRichTextBox.Name = "baseUserRichTextBox";
+            this.baseUserRichTextBox.Size = new System.Drawing.Size(282, 371);
+            this.baseUserRichTextBox.TabIndex = 12;
+            this.baseUserRichTextBox.Text = "";
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 453);
-            this.Controls.Add(this.dataBaseUser);
+            this.Controls.Add(this.RefreshButton);
+            this.Controls.Add(this.baseUserRichTextBox);
+            this.Controls.Add(this.statusCheckBox);
+            this.Controls.Add(this.privilegeCheckBox);
+            this.Controls.Add(this.btnAddPrivileges);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAddUser);
             this.Name = "AddUser";
             this.Text = "AddUser";
-            this.Load += new System.EventHandler(this.AddUser_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataBaseUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBaseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
             this.ResumeLayout(false);
@@ -163,13 +172,13 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.DataGridView dataBaseUser;
         private DatabaseDataSet1 databaseDataSet1;
         private System.Windows.Forms.BindingSource userBaseBindingSource;
         private DatabaseDataSet1TableAdapters.UserBaseTableAdapter userBaseTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn statusDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.CheckBox privilegeCheckBox;
+        private System.Windows.Forms.CheckBox statusCheckBox;
+        private System.Windows.Forms.Button btnAddPrivileges;
+        private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.RichTextBox baseUserRichTextBox;
     }
 }

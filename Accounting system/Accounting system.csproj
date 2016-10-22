@@ -73,7 +73,6 @@
     <Compile Include="Admin\AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Admin.cs" />
     <Compile Include="Admin\AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +91,7 @@
     <Compile Include="Admin\DeleteGoods.Designer.cs">
       <DependentUpon>DeleteGoods.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD.cs" />
     <Compile Include="DatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,11 +152,11 @@
     <Compile Include="User\OrderProduct.Designer.cs">
       <DependentUpon>OrderProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\Registration.cs">
+    <Compile Include="User\RegistrationUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\Registration.Designer.cs">
-      <DependentUpon>Registration.cs</DependentUpon>
+    <Compile Include="User\RegistrationUser.Designer.cs">
+      <DependentUpon>RegistrationUser.cs</DependentUpon>
     </Compile>
     <Compile Include="User\ReturnGoods.cs">
       <SubType>Form</SubType>
@@ -164,7 +164,6 @@
     <Compile Include="User\ReturnGoods.Designer.cs">
       <DependentUpon>ReturnGoods.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\User.cs" />
     <Compile Include="User\UserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,8 +209,8 @@
     <EmbeddedResource Include="User\OrderProduct.resx">
       <DependentUpon>OrderProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\Registration.resx">
-      <DependentUpon>Registration.cs</DependentUpon>
+    <EmbeddedResource Include="User\RegistrationUser.resx">
+      <DependentUpon>RegistrationUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\ReturnGoods.resx">
       <DependentUpon>ReturnGoods.cs</DependentUpon>

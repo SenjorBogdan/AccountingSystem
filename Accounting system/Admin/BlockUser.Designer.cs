@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataBaseUser = new System.Windows.Forms.DataGridView();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnBlockUser = new System.Windows.Forms.Button();
-            this.databaseDataSet2 = new Accounting_system.DatabaseDataSet2();
-            this.userBaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userBaseTableAdapter = new Accounting_system.DatabaseDataSet2TableAdapters.UserBaseTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.userBaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet2 = new Accounting_system.DatabaseDataSet2();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBlockUser = new System.Windows.Forms.Button();
+            this.userBaseTableAdapter = new Accounting_system.DatabaseDataSet2TableAdapters.UserBaseTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBaseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataBaseUser
@@ -60,56 +60,6 @@
             this.dataBaseUser.Name = "dataBaseUser";
             this.dataBaseUser.Size = new System.Drawing.Size(423, 429);
             this.dataBaseUser.TabIndex = 11;
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(96, 162);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(18, 13);
-            this.lblId.TabIndex = 10;
-            this.lblId.Text = "ID";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(55, 178);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
-            this.txtId.TabIndex = 9;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(68, 413);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 8;
-            this.btnExit.Text = "Вихід";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnBlockUser
-            // 
-            this.btnBlockUser.Location = new System.Drawing.Point(62, 217);
-            this.btnBlockUser.Name = "btnBlockUser";
-            this.btnBlockUser.Size = new System.Drawing.Size(87, 23);
-            this.btnBlockUser.TabIndex = 7;
-            this.btnBlockUser.Text = "Заблокувати";
-            this.btnBlockUser.UseVisualStyleBackColor = true;
-            this.btnBlockUser.Click += new System.EventHandler(this.btnBlockUser_Click);
-            // 
-            // databaseDataSet2
-            // 
-            this.databaseDataSet2.DataSetName = "DatabaseDataSet2";
-            this.databaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // userBaseBindingSource
-            // 
-            this.userBaseBindingSource.DataMember = "UserBase";
-            this.userBaseBindingSource.DataSource = this.databaseDataSet2;
-            // 
-            // userBaseTableAdapter
-            // 
-            this.userBaseTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -136,6 +86,56 @@
             this.statusDataGridViewCheckBoxColumn.HeaderText = "Status";
             this.statusDataGridViewCheckBoxColumn.Name = "statusDataGridViewCheckBoxColumn";
             // 
+            // userBaseBindingSource
+            // 
+            this.userBaseBindingSource.DataMember = "UserBase";
+            this.userBaseBindingSource.DataSource = this.databaseDataSet2;
+            // 
+            // databaseDataSet2
+            // 
+            this.databaseDataSet2.DataSetName = "DatabaseDataSet2";
+            this.databaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(69, 163);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(85, 13);
+            this.lblId.TabIndex = 10;
+            this.lblId.Text = "ID Користувача";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(72, 179);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(82, 20);
+            this.txtId.TabIndex = 9;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(68, 413);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "Вихід";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnBlockUser
+            // 
+            this.btnBlockUser.Location = new System.Drawing.Point(68, 218);
+            this.btnBlockUser.Name = "btnBlockUser";
+            this.btnBlockUser.Size = new System.Drawing.Size(87, 23);
+            this.btnBlockUser.TabIndex = 7;
+            this.btnBlockUser.Text = "Заблокувати";
+            this.btnBlockUser.UseVisualStyleBackColor = true;
+            this.btnBlockUser.Click += new System.EventHandler(this.btnBlockUser_Click);
+            // 
+            // userBaseTableAdapter
+            // 
+            this.userBaseTableAdapter.ClearBeforeFill = true;
+            // 
             // BlockUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,8 +150,8 @@
             this.Text = "BlockUser";
             this.Load += new System.EventHandler(this.BlockUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataBaseUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBaseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

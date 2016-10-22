@@ -33,8 +33,8 @@ namespace Accounting_system.User
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.OrderProduct(txtId.Text);
+            CRUD crud = new CRUD();
+            crud.OrderProduct(txtId.Text);
         }
     }
 }

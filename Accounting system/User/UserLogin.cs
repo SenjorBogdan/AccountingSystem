@@ -16,15 +16,6 @@ namespace Accounting_system.User
         {
             InitializeComponent();
         }
-
-        private void btnRegistration_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Registration registration = new Registration();
-            registration.Show();
-        }
-
-
         private void btnViewProduct_Click(object sender, EventArgs e)
         {
             this.Hide();

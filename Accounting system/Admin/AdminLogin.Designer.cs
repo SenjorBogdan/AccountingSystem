@@ -37,7 +37,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(156, 270);
+            this.btnExit.Location = new System.Drawing.Point(154, 323);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 14;
@@ -47,9 +47,9 @@
             // 
             // btnBlockUser
             // 
-            this.btnBlockUser.Location = new System.Drawing.Point(69, 199);
+            this.btnBlockUser.Location = new System.Drawing.Point(69, 242);
             this.btnBlockUser.Name = "btnBlockUser";
-            this.btnBlockUser.Size = new System.Drawing.Size(241, 23);
+            this.btnBlockUser.Size = new System.Drawing.Size(241, 59);
             this.btnBlockUser.TabIndex = 13;
             this.btnBlockUser.Text = "Заблокувати користувача";
             this.btnBlockUser.UseVisualStyleBackColor = true;
@@ -57,9 +57,9 @@
             // 
             // btnDeleteGoods
             // 
-            this.btnDeleteGoods.Location = new System.Drawing.Point(69, 146);
+            this.btnDeleteGoods.Location = new System.Drawing.Point(69, 23);
             this.btnDeleteGoods.Name = "btnDeleteGoods";
-            this.btnDeleteGoods.Size = new System.Drawing.Size(241, 23);
+            this.btnDeleteGoods.Size = new System.Drawing.Size(241, 61);
             this.btnDeleteGoods.TabIndex = 12;
             this.btnDeleteGoods.Text = "Видалити товар";
             this.btnDeleteGoods.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@
             // 
             // btnAddGoods
             // 
-            this.btnAddGoods.Location = new System.Drawing.Point(69, 93);
+            this.btnAddGoods.Location = new System.Drawing.Point(69, 169);
             this.btnAddGoods.Name = "btnAddGoods";
-            this.btnAddGoods.Size = new System.Drawing.Size(241, 23);
+            this.btnAddGoods.Size = new System.Drawing.Size(241, 61);
             this.btnAddGoods.TabIndex = 11;
             this.btnAddGoods.Text = "Добавити товар";
             this.btnAddGoods.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@
             // 
             // btnAddUser
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(69, 40);
+            this.btnAddUser.Location = new System.Drawing.Point(69, 96);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(241, 23);
+            this.btnAddUser.Size = new System.Drawing.Size(241, 61);
             this.btnAddUser.TabIndex = 10;
             this.btnAddUser.Text = "Добавити користувача";
             this.btnAddUser.UseVisualStyleBackColor = true;

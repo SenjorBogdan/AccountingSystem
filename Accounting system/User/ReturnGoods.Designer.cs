@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.databaseDataSet6 = new Accounting_system.DatabaseDataSet6();
-            this.goodsUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsUserTableAdapter = new Accounting_system.DatabaseDataSet6TableAdapters.GoodsUserTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet6 = new Accounting_system.DatabaseDataSet6();
+            this.goodsUserTableAdapter = new Accounting_system.DatabaseDataSet6TableAdapters.GoodsUserTableAdapter();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsUserBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -69,20 +69,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(340, 349);
             this.dataGridView1.TabIndex = 13;
             // 
-            // databaseDataSet6
-            // 
-            this.databaseDataSet6.DataSetName = "DatabaseDataSet6";
-            this.databaseDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // goodsUserBindingSource
-            // 
-            this.goodsUserBindingSource.DataMember = "GoodsUser";
-            this.goodsUserBindingSource.DataSource = this.databaseDataSet6;
-            // 
-            // goodsUserTableAdapter
-            // 
-            this.goodsUserTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -102,16 +88,30 @@
             this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
             this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
             // 
+            // goodsUserBindingSource
+            // 
+            this.goodsUserBindingSource.DataMember = "GoodsUser";
+            this.goodsUserBindingSource.DataSource = this.databaseDataSet6;
+            // 
+            // databaseDataSet6
+            // 
+            this.databaseDataSet6.DataSetName = "DatabaseDataSet6";
+            this.databaseDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // goodsUserTableAdapter
+            // 
+            this.goodsUserTableAdapter.ClearBeforeFill = true;
+            // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(76, 134);
+            this.txtID.Location = new System.Drawing.Point(59, 130);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(45, 20);
+            this.txtID.Size = new System.Drawing.Size(75, 20);
             this.txtID.TabIndex = 14;
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(61, 178);
+            this.btnReturn.Location = new System.Drawing.Point(59, 178);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(75, 23);
             this.btnReturn.TabIndex = 15;
@@ -122,11 +122,11 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(89, 118);
+            this.lblID.Location = new System.Drawing.Point(62, 114);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.Size = new System.Drawing.Size(69, 13);
             this.lblID.TabIndex = 16;
-            this.lblID.Text = "ID";
+            this.lblID.Text = "ID Продукта";
             // 
             // ReturnGoods
             // 
@@ -142,8 +142,8 @@
             this.Text = "ReturnGoods";
             this.Load += new System.EventHandler(this.ReturnGoods_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsUserBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

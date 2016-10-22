@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnRegistration = new System.Windows.Forms.Button();
             this.btnViewProduct = new System.Windows.Forms.Button();
             this.btnOrderProduct = new System.Windows.Forms.Button();
             this.btnReturnGoods = new System.Windows.Forms.Button();
@@ -38,7 +37,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(134, 281);
+            this.btnExit.Location = new System.Drawing.Point(119, 284);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 11;
@@ -46,21 +45,11 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnRegistration
-            // 
-            this.btnRegistration.Location = new System.Drawing.Point(36, 12);
-            this.btnRegistration.Name = "btnRegistration";
-            this.btnRegistration.Size = new System.Drawing.Size(241, 29);
-            this.btnRegistration.TabIndex = 6;
-            this.btnRegistration.Text = "Зареєструватися";
-            this.btnRegistration.UseVisualStyleBackColor = true;
-            this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
-            // 
             // btnViewProduct
             // 
-            this.btnViewProduct.Location = new System.Drawing.Point(36, 59);
+            this.btnViewProduct.Location = new System.Drawing.Point(36, 62);
             this.btnViewProduct.Name = "btnViewProduct";
-            this.btnViewProduct.Size = new System.Drawing.Size(241, 29);
+            this.btnViewProduct.Size = new System.Drawing.Size(241, 46);
             this.btnViewProduct.TabIndex = 12;
             this.btnViewProduct.Text = "Переглянути товар";
             this.btnViewProduct.UseVisualStyleBackColor = true;
@@ -68,9 +57,9 @@
             // 
             // btnOrderProduct
             // 
-            this.btnOrderProduct.Location = new System.Drawing.Point(36, 100);
+            this.btnOrderProduct.Location = new System.Drawing.Point(36, 161);
             this.btnOrderProduct.Name = "btnOrderProduct";
-            this.btnOrderProduct.Size = new System.Drawing.Size(241, 29);
+            this.btnOrderProduct.Size = new System.Drawing.Size(241, 45);
             this.btnOrderProduct.TabIndex = 13;
             this.btnOrderProduct.Text = "Замовити товар";
             this.btnOrderProduct.UseVisualStyleBackColor = true;
@@ -78,9 +67,9 @@
             // 
             // btnReturnGoods
             // 
-            this.btnReturnGoods.Location = new System.Drawing.Point(36, 139);
+            this.btnReturnGoods.Location = new System.Drawing.Point(36, 112);
             this.btnReturnGoods.Name = "btnReturnGoods";
-            this.btnReturnGoods.Size = new System.Drawing.Size(241, 29);
+            this.btnReturnGoods.Size = new System.Drawing.Size(241, 45);
             this.btnReturnGoods.TabIndex = 14;
             this.btnReturnGoods.Text = "Повернути товар";
             this.btnReturnGoods.UseVisualStyleBackColor = true;
@@ -88,9 +77,9 @@
             // 
             // btnHistoryShopping
             // 
-            this.btnHistoryShopping.Location = new System.Drawing.Point(36, 182);
+            this.btnHistoryShopping.Location = new System.Drawing.Point(36, 210);
             this.btnHistoryShopping.Name = "btnHistoryShopping";
-            this.btnHistoryShopping.Size = new System.Drawing.Size(241, 29);
+            this.btnHistoryShopping.Size = new System.Drawing.Size(241, 45);
             this.btnHistoryShopping.TabIndex = 15;
             this.btnHistoryShopping.Text = "Переглянути історію покупок";
             this.btnHistoryShopping.UseVisualStyleBackColor = true;
@@ -106,7 +95,6 @@
             this.Controls.Add(this.btnOrderProduct);
             this.Controls.Add(this.btnViewProduct);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnRegistration);
             this.Name = "UserLogin";
             this.Text = "UserLogin";
             this.ResumeLayout(false);
@@ -116,7 +104,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnRegistration;
         private System.Windows.Forms.Button btnViewProduct;
         private System.Windows.Forms.Button btnOrderProduct;
         private System.Windows.Forms.Button btnReturnGoods;

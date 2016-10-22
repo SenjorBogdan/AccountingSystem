@@ -19,8 +19,8 @@ namespace Accounting_system.Admin
 
         private void btnBlockUser_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
-            admin.BlockUser(txtId.Text);
+            CRUD crud = new CRUD();
+            crud.BlockUser(txtId.Text);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

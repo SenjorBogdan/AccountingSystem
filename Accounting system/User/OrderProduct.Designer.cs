@@ -32,17 +32,17 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.databaseDataSet5 = new Accounting_system.DatabaseDataSet5();
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsTableAdapter = new Accounting_system.DatabaseDataSet5TableAdapters.GoodsTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet5 = new Accounting_system.DatabaseDataSet5();
+            this.goodsTableAdapter = new Accounting_system.DatabaseDataSet5TableAdapters.GoodsTableAdapter();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -79,20 +79,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(344, 311);
             this.dataGridView1.TabIndex = 14;
             // 
-            // databaseDataSet5
-            // 
-            this.databaseDataSet5.DataSetName = "DatabaseDataSet5";
-            this.databaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // goodsBindingSource
-            // 
-            this.goodsBindingSource.DataMember = "Goods";
-            this.goodsBindingSource.DataSource = this.databaseDataSet5;
-            // 
-            // goodsTableAdapter
-            // 
-            this.goodsTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -112,9 +98,23 @@
             this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
             this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
             // 
+            // goodsBindingSource
+            // 
+            this.goodsBindingSource.DataMember = "Goods";
+            this.goodsBindingSource.DataSource = this.databaseDataSet5;
+            // 
+            // databaseDataSet5
+            // 
+            this.databaseDataSet5.DataSetName = "DatabaseDataSet5";
+            this.databaseDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // goodsTableAdapter
+            // 
+            this.goodsTableAdapter.ClearBeforeFill = true;
+            // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(41, 122);
+            this.txtId.Location = new System.Drawing.Point(41, 124);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(75, 20);
             this.txtId.TabIndex = 15;
@@ -122,11 +122,11 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(69, 106);
+            this.lblID.Location = new System.Drawing.Point(44, 108);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.Size = new System.Drawing.Size(69, 13);
             this.lblID.TabIndex = 16;
-            this.lblID.Text = "ID";
+            this.lblID.Text = "ID Продукта";
             // 
             // OrderProduct
             // 
@@ -142,8 +142,8 @@
             this.Text = "OrderProduct";
             this.Load += new System.EventHandler(this.OrderProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

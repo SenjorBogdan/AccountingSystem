@@ -19,8 +19,8 @@ namespace Accounting_system.Admin
 
         private void btnDeleteGoods_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
-            admin.DeleteGoods(txtId.Text);
+            CRUD crud = new CRUD();
+            crud.DeleteGoods(txtId.Text);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

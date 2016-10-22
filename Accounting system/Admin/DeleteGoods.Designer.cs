@@ -57,7 +57,7 @@
             // 
             // btnDeleteGoods
             // 
-            this.btnDeleteGoods.Location = new System.Drawing.Point(4, 151);
+            this.btnDeleteGoods.Location = new System.Drawing.Point(1, 154);
             this.btnDeleteGoods.Name = "btnDeleteGoods";
             this.btnDeleteGoods.Size = new System.Drawing.Size(151, 23);
             this.btnDeleteGoods.TabIndex = 1;
@@ -110,19 +110,19 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(29, 106);
+            this.txtId.Location = new System.Drawing.Point(39, 109);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.Size = new System.Drawing.Size(75, 20);
             this.txtId.TabIndex = 3;
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(70, 90);
+            this.lblId.Location = new System.Drawing.Point(48, 93);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(18, 13);
+            this.lblId.Size = new System.Drawing.Size(57, 13);
             this.lblId.TabIndex = 4;
-            this.lblId.Text = "ID";
+            this.lblId.Text = "ID Товару";
             // 
             // goodsTableAdapter
             // 

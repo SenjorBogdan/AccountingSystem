@@ -19,8 +19,8 @@ namespace Accounting_system.Admin
 
         private void btnAddGoods_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
-            admin.AddGoods(txtName.Text,txtQuantity.Text);
+            CRUD crud = new CRUD();
+            crud.AddGoods(txtName.Text,txtQuantity.Text);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
