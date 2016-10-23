@@ -29,5 +29,13 @@ namespace Accounting_system.Admin
             AdminLogin adminLogin = new AdminLogin();
             adminLogin.Show();
         }
+
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -28,67 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.historyShoppingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseDataSet7 = new Accounting_system.DatabaseDataSet7();
-            this.historyShoppingTableAdapter = new Accounting_system.DatabaseDataSet7TableAdapters.HistoryShoppingTableAdapter();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnClearHistory = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historyShoppingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet7)).BeginInit();
+            this.quantityLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.IDLabel = new System.Windows.Forms.Label();
+            this.quantityRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.NameRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.IDRichTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.historyShoppingBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(162, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(342, 391);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // historyShoppingBindingSource
-            // 
-            this.historyShoppingBindingSource.DataMember = "HistoryShopping";
-            this.historyShoppingBindingSource.DataSource = this.databaseDataSet7;
-            // 
-            // databaseDataSet7
-            // 
-            this.databaseDataSet7.DataSetName = "DatabaseDataSet7";
-            this.databaseDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // historyShoppingTableAdapter
-            // 
-            this.historyShoppingTableAdapter.ClearBeforeFill = true;
             // 
             // btnExit
             // 
@@ -110,34 +58,85 @@
             this.btnClearHistory.UseVisualStyleBackColor = true;
             this.btnClearHistory.Click += new System.EventHandler(this.btnClearHistory_Click);
             // 
+            // quantityLabel
+            // 
+            this.quantityLabel.AutoSize = true;
+            this.quantityLabel.Location = new System.Drawing.Point(441, 27);
+            this.quantityLabel.Name = "quantityLabel";
+            this.quantityLabel.Size = new System.Drawing.Size(53, 13);
+            this.quantityLabel.TabIndex = 20;
+            this.quantityLabel.Text = "Кількість";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(374, 27);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(39, 13);
+            this.nameLabel.TabIndex = 19;
+            this.nameLabel.Text = "Назва";
+            // 
+            // IDLabel
+            // 
+            this.IDLabel.AutoSize = true;
+            this.IDLabel.Location = new System.Drawing.Point(312, 27);
+            this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Size = new System.Drawing.Size(18, 13);
+            this.IDLabel.TabIndex = 18;
+            this.IDLabel.Text = "ID";
+            // 
+            // quantityRichTextBox
+            // 
+            this.quantityRichTextBox.Location = new System.Drawing.Point(444, 46);
+            this.quantityRichTextBox.Name = "quantityRichTextBox";
+            this.quantityRichTextBox.Size = new System.Drawing.Size(44, 357);
+            this.quantityRichTextBox.TabIndex = 17;
+            this.quantityRichTextBox.Text = "";
+            // 
+            // NameRichTextBox
+            // 
+            this.NameRichTextBox.Location = new System.Drawing.Point(353, 46);
+            this.NameRichTextBox.Name = "NameRichTextBox";
+            this.NameRichTextBox.Size = new System.Drawing.Size(94, 357);
+            this.NameRichTextBox.TabIndex = 16;
+            this.NameRichTextBox.Text = "";
+            // 
+            // IDRichTextBox
+            // 
+            this.IDRichTextBox.Location = new System.Drawing.Point(296, 46);
+            this.IDRichTextBox.Name = "IDRichTextBox";
+            this.IDRichTextBox.Size = new System.Drawing.Size(60, 357);
+            this.IDRichTextBox.TabIndex = 15;
+            this.IDRichTextBox.Text = "";
+            // 
             // HistoryShopping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 415);
+            this.Controls.Add(this.quantityLabel);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.IDLabel);
+            this.Controls.Add(this.quantityRichTextBox);
+            this.Controls.Add(this.NameRichTextBox);
+            this.Controls.Add(this.IDRichTextBox);
             this.Controls.Add(this.btnClearHistory);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "HistoryShopping";
             this.Text = "HistoryShopping";
-            this.Load += new System.EventHandler(this.HistoryShopping_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historyShoppingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet7)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private DatabaseDataSet7 databaseDataSet7;
-        private System.Windows.Forms.BindingSource historyShoppingBindingSource;
-        private DatabaseDataSet7TableAdapters.HistoryShoppingTableAdapter historyShoppingTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnClearHistory;
+        private System.Windows.Forms.Label quantityLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label IDLabel;
+        private System.Windows.Forms.RichTextBox quantityRichTextBox;
+        private System.Windows.Forms.RichTextBox NameRichTextBox;
+        private System.Windows.Forms.RichTextBox IDRichTextBox;
     }
 }

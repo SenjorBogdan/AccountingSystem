@@ -28,66 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.databaseDataSet4 = new Accounting_system.DatabaseDataSet4();
-            this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsTableAdapter = new Accounting_system.DatabaseDataSet4TableAdapters.GoodsTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
+            this.quantityLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.IDLabel = new System.Windows.Forms.Label();
+            this.quantityRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.NameRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.IDRichTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.goodsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(339, 298);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // databaseDataSet4
-            // 
-            this.databaseDataSet4.DataSetName = "DatabaseDataSet4";
-            this.databaseDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // goodsBindingSource
-            // 
-            this.goodsBindingSource.DataMember = "Goods";
-            this.goodsBindingSource.DataSource = this.databaseDataSet4;
-            // 
-            // goodsTableAdapter
-            // 
-            this.goodsTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
             // 
             // btnExit
             // 
@@ -99,31 +47,83 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // quantityLabel
+            // 
+            this.quantityLabel.AutoSize = true;
+            this.quantityLabel.Location = new System.Drawing.Point(256, 35);
+            this.quantityLabel.Name = "quantityLabel";
+            this.quantityLabel.Size = new System.Drawing.Size(53, 13);
+            this.quantityLabel.TabIndex = 26;
+            this.quantityLabel.Text = "Кількість";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(189, 35);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(39, 13);
+            this.nameLabel.TabIndex = 25;
+            this.nameLabel.Text = "Назва";
+            // 
+            // IDLabel
+            // 
+            this.IDLabel.AutoSize = true;
+            this.IDLabel.Location = new System.Drawing.Point(127, 35);
+            this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Size = new System.Drawing.Size(18, 13);
+            this.IDLabel.TabIndex = 24;
+            this.IDLabel.Text = "ID";
+            // 
+            // quantityRichTextBox
+            // 
+            this.quantityRichTextBox.Location = new System.Drawing.Point(259, 54);
+            this.quantityRichTextBox.Name = "quantityRichTextBox";
+            this.quantityRichTextBox.Size = new System.Drawing.Size(44, 272);
+            this.quantityRichTextBox.TabIndex = 23;
+            this.quantityRichTextBox.Text = "";
+            // 
+            // NameRichTextBox
+            // 
+            this.NameRichTextBox.Location = new System.Drawing.Point(168, 54);
+            this.NameRichTextBox.Name = "NameRichTextBox";
+            this.NameRichTextBox.Size = new System.Drawing.Size(94, 272);
+            this.NameRichTextBox.TabIndex = 22;
+            this.NameRichTextBox.Text = "";
+            // 
+            // IDRichTextBox
+            // 
+            this.IDRichTextBox.Location = new System.Drawing.Point(111, 54);
+            this.IDRichTextBox.Name = "IDRichTextBox";
+            this.IDRichTextBox.Size = new System.Drawing.Size(60, 272);
+            this.IDRichTextBox.TabIndex = 21;
+            this.IDRichTextBox.Text = "";
+            // 
             // ViewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 367);
+            this.Controls.Add(this.quantityLabel);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.IDLabel);
+            this.Controls.Add(this.quantityRichTextBox);
+            this.Controls.Add(this.NameRichTextBox);
+            this.Controls.Add(this.IDRichTextBox);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "ViewProduct";
             this.Text = "ViewProduct";
-            this.Load += new System.EventHandler(this.ViewProduct_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private DatabaseDataSet4 databaseDataSet4;
-        private System.Windows.Forms.BindingSource goodsBindingSource;
-        private DatabaseDataSet4TableAdapters.GoodsTableAdapter goodsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label quantityLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label IDLabel;
+        private System.Windows.Forms.RichTextBox quantityRichTextBox;
+        private System.Windows.Forms.RichTextBox NameRichTextBox;
+        private System.Windows.Forms.RichTextBox IDRichTextBox;
     }
 }

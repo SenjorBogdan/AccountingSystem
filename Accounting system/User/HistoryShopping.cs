@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,25 +16,39 @@ namespace Accounting_system.User
         public HistoryShopping()
         {
             InitializeComponent();
+            Refresh();
         }
 
-        private void HistoryShopping_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'databaseDataSet7.HistoryShopping' table. You can move, or remove it, as needed.
-            this.historyShoppingTableAdapter.Fill(this.databaseDataSet7.HistoryShopping);
-
-        }
 
         private void btnClearHistory_Click(object sender, EventArgs e)
         {
             CRUD crud = new CRUD();
-            crud.HistoryShopping();
+            crud.DeleteHistoryShopping();
+            Refresh();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
             UserLogin userLogin = new UserLogin();
             userLogin.Show();
+        }
+
+        public void Refresh()
+        {
+            IDRichTextBox.Clear();
+            NameRichTextBox.Clear();
+            quantityRichTextBox.Clear();
+            SqlConnection connection = new SqlConnection(CRUD.connectionstring);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Goods", connection);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "Goods");
+            foreach (DataRow dr in ds.Tables["Goods"].Rows)
+            {
+                IDRichTextBox.Text += dr["Id"] + "\n";
+                NameRichTextBox.Text += dr["Name"] + "\n";
+                quantityRichTextBox.Text += dr["Quantity"] + "\n";
+
+            }
         }
 
     }

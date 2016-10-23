@@ -79,12 +79,6 @@
     <Compile Include="Admin\AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\BlockUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\BlockUser.Designer.cs">
-      <DependentUpon>BlockUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\DeleteGoods.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\BlockUser.resx">
-      <DependentUpon>BlockUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\DeleteGoods.resx">
       <DependentUpon>DeleteGoods.cs</DependentUpon>

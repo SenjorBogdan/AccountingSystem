@@ -158,7 +158,7 @@ namespace Accounting_system
             MessageBox.Show("Товар успішно повернено");
         }
         // Історія покупок(видалення історії)
-        public void HistoryShopping()
+        public void DeleteHistoryShopping()
         {
             SqlConnection connect = new SqlConnection(connectionstring);
             SqlCommand cmd = new SqlCommand("DELETE FROM HistoryShopping", connect);

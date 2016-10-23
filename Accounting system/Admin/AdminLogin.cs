@@ -38,13 +38,6 @@ namespace Accounting_system.Admin
             deleteGoods.Show();
         }
 
-        private void btnBlockUser_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            BlockUser blockUser = new BlockUser();
-            blockUser.Show();
-            
-        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {

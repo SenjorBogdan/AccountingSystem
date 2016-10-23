@@ -46,18 +46,33 @@ namespace Accounting_system.Admin
         {
             Refresh();
         }
-        public void Refresh()
+        private void Refresh()
         {
-            baseUserRichTextBox.Clear();
+
+            IDRichTextBox.Clear();
+            loginRichTextBox.Clear();
+            statusRichTextBox.Clear();
+            privilegesRichTextBox.Clear();
             SqlConnection connection = new SqlConnection(CRUD.connectionstring);
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM UserBase", connection);
             DataSet ds = new DataSet();
             adapter.Fill(ds,"UserBase");
-            baseUserRichTextBox.Text += "ID" + "\t" + "Логін" + "\t\t" + "Статус" + "\t" + "Привілегії" + "\n " + new string('-',90) + "\n";
-
             foreach (DataRow dr in ds.Tables["UserBase"].Rows)
             {
-                baseUserRichTextBox.Text += dr["Id"] + "\t" + dr["Login"] + "\t\t" + dr["Status"] + "\t" + dr["Privileges"] + "\n";
+
+                IDRichTextBox.Text += dr["Id"] + "\n";
+                loginRichTextBox.Text += dr["Login"] + "\n";
+                statusRichTextBox.Text += dr["Status"] + "\n";
+                privilegesRichTextBox.Text += dr["Privileges"] + "\n";
+
+            }
+        }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

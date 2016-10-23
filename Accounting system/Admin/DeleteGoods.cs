@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,12 +16,14 @@ namespace Accounting_system.Admin
         public DeleteGoods()
         {
             InitializeComponent();
+            Refresh();
         }
 
         private void btnDeleteGoods_Click(object sender, EventArgs e)
         {
             CRUD crud = new CRUD();
             crud.DeleteGoods(txtId.Text);
+            Refresh();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -30,11 +33,30 @@ namespace Accounting_system.Admin
             adminLogin.Show();
         }
 
-        private void DeleteGoods_Load(object sender, EventArgs e)
+        public void Refresh()
         {
-            // TODO: This line of code loads data into the 'databaseDataSet.Goods' table. You can move, or remove it, as needed.
-            this.goodsTableAdapter.Fill(this.databaseDataSet.Goods);
+            IDRichTextBox.Clear();
+            NameRichTextBox.Clear();
+            quantityRichTextBox.Clear();
+           SqlConnection connection = new SqlConnection(CRUD.connectionstring);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Goods", connection);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "Goods");
+            foreach (DataRow dr in ds.Tables["Goods"].Rows)
+            {
+                IDRichTextBox.Text += dr["Id"] + "\n";
+                NameRichTextBox.Text += dr["Name"] + "\n";
+                quantityRichTextBox.Text += dr["Quantity"] + "\n";
 
+            }
+        }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

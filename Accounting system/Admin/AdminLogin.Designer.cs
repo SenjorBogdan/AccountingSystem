@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnBlockUser = new System.Windows.Forms.Button();
             this.btnDeleteGoods = new System.Windows.Forms.Button();
             this.btnAddGoods = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
@@ -44,16 +43,6 @@
             this.btnExit.Text = "Вийти";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnBlockUser
-            // 
-            this.btnBlockUser.Location = new System.Drawing.Point(69, 242);
-            this.btnBlockUser.Name = "btnBlockUser";
-            this.btnBlockUser.Size = new System.Drawing.Size(241, 59);
-            this.btnBlockUser.TabIndex = 13;
-            this.btnBlockUser.Text = "Заблокувати користувача";
-            this.btnBlockUser.UseVisualStyleBackColor = true;
-            this.btnBlockUser.Click += new System.EventHandler(this.btnBlockUser_Click);
             // 
             // btnDeleteGoods
             // 
@@ -91,7 +80,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 358);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnBlockUser);
             this.Controls.Add(this.btnDeleteGoods);
             this.Controls.Add(this.btnAddGoods);
             this.Controls.Add(this.btnAddUser);
@@ -104,7 +92,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnBlockUser;
         private System.Windows.Forms.Button btnDeleteGoods;
         private System.Windows.Forms.Button btnAddGoods;
         private System.Windows.Forms.Button btnAddUser;

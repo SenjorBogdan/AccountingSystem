@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
-            this.userBaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseDataSet1 = new Accounting_system.DatabaseDataSet1();
-            this.userBaseTableAdapter = new Accounting_system.DatabaseDataSet1TableAdapters.UserBaseTableAdapter();
             this.privilegeCheckBox = new System.Windows.Forms.CheckBox();
             this.statusCheckBox = new System.Windows.Forms.CheckBox();
             this.btnAddPrivileges = new System.Windows.Forms.Button();
             this.RefreshButton = new System.Windows.Forms.Button();
-            this.baseUserRichTextBox = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.userBaseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).BeginInit();
+            this.IDRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.loginRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.statusRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.IDlabel = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
+            this.privilegesRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.privilegesLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAddUser
@@ -71,6 +72,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 2;
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // lblId
             // 
@@ -80,20 +82,6 @@
             this.lblId.Size = new System.Drawing.Size(85, 13);
             this.lblId.TabIndex = 4;
             this.lblId.Text = "ID Користувача";
-            // 
-            // userBaseBindingSource
-            // 
-            this.userBaseBindingSource.DataMember = "UserBase";
-            this.userBaseBindingSource.DataSource = this.databaseDataSet1;
-            // 
-            // databaseDataSet1
-            // 
-            this.databaseDataSet1.DataSetName = "DatabaseDataSet1";
-            this.databaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // userBaseTableAdapter
-            // 
-            this.userBaseTableAdapter.ClearBeforeFill = true;
             // 
             // privilegeCheckBox
             // 
@@ -110,9 +98,9 @@
             this.statusCheckBox.AutoSize = true;
             this.statusCheckBox.Location = new System.Drawing.Point(104, 162);
             this.statusCheckBox.Name = "statusCheckBox";
-            this.statusCheckBox.Size = new System.Drawing.Size(135, 17);
+            this.statusCheckBox.Size = new System.Drawing.Size(192, 17);
             this.statusCheckBox.TabIndex = 11;
-            this.statusCheckBox.Text = "Дати/Забрати статус";
+            this.statusCheckBox.Text = "Дати/Забрати статус активності";
             this.statusCheckBox.UseVisualStyleBackColor = true;
             // 
             // btnAddPrivileges
@@ -135,21 +123,88 @@
             this.RefreshButton.UseVisualStyleBackColor = true;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
-            // baseUserRichTextBox
+            // IDRichTextBox
             // 
-            this.baseUserRichTextBox.Location = new System.Drawing.Point(388, 43);
-            this.baseUserRichTextBox.Name = "baseUserRichTextBox";
-            this.baseUserRichTextBox.Size = new System.Drawing.Size(282, 371);
-            this.baseUserRichTextBox.TabIndex = 12;
-            this.baseUserRichTextBox.Text = "";
+            this.IDRichTextBox.Location = new System.Drawing.Point(374, 41);
+            this.IDRichTextBox.Name = "IDRichTextBox";
+            this.IDRichTextBox.Size = new System.Drawing.Size(55, 371);
+            this.IDRichTextBox.TabIndex = 12;
+            this.IDRichTextBox.Text = "";
+            // 
+            // loginRichTextBox
+            // 
+            this.loginRichTextBox.Location = new System.Drawing.Point(426, 41);
+            this.loginRichTextBox.Name = "loginRichTextBox";
+            this.loginRichTextBox.Size = new System.Drawing.Size(116, 371);
+            this.loginRichTextBox.TabIndex = 14;
+            this.loginRichTextBox.Text = "";
+            // 
+            // statusRichTextBox
+            // 
+            this.statusRichTextBox.Location = new System.Drawing.Point(538, 41);
+            this.statusRichTextBox.Name = "statusRichTextBox";
+            this.statusRichTextBox.Size = new System.Drawing.Size(58, 371);
+            this.statusRichTextBox.TabIndex = 15;
+            this.statusRichTextBox.Text = "";
+            // 
+            // IDlabel
+            // 
+            this.IDlabel.AutoSize = true;
+            this.IDlabel.Location = new System.Drawing.Point(385, 25);
+            this.IDlabel.Name = "IDlabel";
+            this.IDlabel.Size = new System.Drawing.Size(18, 13);
+            this.IDlabel.TabIndex = 16;
+            this.IDlabel.Text = "ID";
+            // 
+            // loginLabel
+            // 
+            this.loginLabel.AutoSize = true;
+            this.loginLabel.Location = new System.Drawing.Point(461, 25);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(34, 13);
+            this.loginLabel.TabIndex = 17;
+            this.loginLabel.Text = "Логін";
+            // 
+            // privilegesRichTextBox
+            // 
+            this.privilegesRichTextBox.Location = new System.Drawing.Point(594, 41);
+            this.privilegesRichTextBox.Name = "privilegesRichTextBox";
+            this.privilegesRichTextBox.Size = new System.Drawing.Size(50, 371);
+            this.privilegesRichTextBox.TabIndex = 18;
+            this.privilegesRichTextBox.Text = "";
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(544, 25);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(41, 13);
+            this.statusLabel.TabIndex = 19;
+            this.statusLabel.Text = "Статус";
+            // 
+            // privilegesLabel
+            // 
+            this.privilegesLabel.AutoSize = true;
+            this.privilegesLabel.Location = new System.Drawing.Point(591, 25);
+            this.privilegesLabel.Name = "privilegesLabel";
+            this.privilegesLabel.Size = new System.Drawing.Size(57, 13);
+            this.privilegesLabel.TabIndex = 20;
+            this.privilegesLabel.Text = "Привілегії";
             // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 453);
+            this.Controls.Add(this.privilegesLabel);
+            this.Controls.Add(this.statusLabel);
+            this.Controls.Add(this.privilegesRichTextBox);
+            this.Controls.Add(this.loginLabel);
+            this.Controls.Add(this.IDlabel);
+            this.Controls.Add(this.statusRichTextBox);
+            this.Controls.Add(this.loginRichTextBox);
             this.Controls.Add(this.RefreshButton);
-            this.Controls.Add(this.baseUserRichTextBox);
+            this.Controls.Add(this.IDRichTextBox);
             this.Controls.Add(this.statusCheckBox);
             this.Controls.Add(this.privilegeCheckBox);
             this.Controls.Add(this.btnAddPrivileges);
@@ -159,8 +214,6 @@
             this.Controls.Add(this.btnAddUser);
             this.Name = "AddUser";
             this.Text = "AddUser";
-            ((System.ComponentModel.ISupportInitialize)(this.userBaseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,13 +225,17 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblId;
-        private DatabaseDataSet1 databaseDataSet1;
-        private System.Windows.Forms.BindingSource userBaseBindingSource;
-        private DatabaseDataSet1TableAdapters.UserBaseTableAdapter userBaseTableAdapter;
         private System.Windows.Forms.CheckBox privilegeCheckBox;
         private System.Windows.Forms.CheckBox statusCheckBox;
         private System.Windows.Forms.Button btnAddPrivileges;
         private System.Windows.Forms.Button RefreshButton;
-        private System.Windows.Forms.RichTextBox baseUserRichTextBox;
+        private System.Windows.Forms.RichTextBox IDRichTextBox;
+        private System.Windows.Forms.RichTextBox loginRichTextBox;
+        private System.Windows.Forms.RichTextBox statusRichTextBox;
+        private System.Windows.Forms.Label IDlabel;
+        private System.Windows.Forms.Label loginLabel;
+        private System.Windows.Forms.RichTextBox privilegesRichTextBox;
+        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label privilegesLabel;
     }
 }

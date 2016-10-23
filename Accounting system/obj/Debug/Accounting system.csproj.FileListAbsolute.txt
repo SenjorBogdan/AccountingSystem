@@ -28,7 +28,6 @@ E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting system.
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Admin.AddGoods.resources
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Admin.AddUser.resources
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Admin.AdminLogin.resources
-E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Admin.BlockUser.resources
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Admin.DeleteGoods.resources
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Login.resources
 E:\Gitab Project\AccountingSystem\Accounting system\obj\Debug\Accounting_system.Properties.Resources.resources
