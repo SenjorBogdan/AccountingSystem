@@ -22,8 +22,10 @@ namespace Accounting_system.Admin
         private void btnDeleteGoods_Click(object sender, EventArgs e)
         {
             CRUD crud = new CRUD();
-            crud.DeleteGoods(txtId.Text);
+            crud.DeleteGoods(idTextBox.Text,quantityTextBox.Text);
             Refresh();
+            idTextBox.Text = "";
+            quantityTextBox.Text = "";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace Accounting_system.Admin
             adminLogin.Show();
         }
 
-        public void Refresh()
+        private void Refresh()
         {
             IDRichTextBox.Clear();
             NameRichTextBox.Clear();
@@ -52,6 +54,14 @@ namespace Accounting_system.Admin
         }
 
         private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void quantityTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar))
             {

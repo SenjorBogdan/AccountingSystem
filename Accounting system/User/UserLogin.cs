@@ -16,12 +16,6 @@ namespace Accounting_system.User
         {
             InitializeComponent();
         }
-        private void btnViewProduct_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ViewProduct viewProduct = new ViewProduct();
-            viewProduct.Show();
-        }
 
         private void btnOrderProduct_Click(object sender, EventArgs e)
         {

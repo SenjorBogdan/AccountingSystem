@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogin));
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDeleteGoods = new System.Windows.Forms.Button();
             this.btnAddGoods = new System.Windows.Forms.Button();
@@ -36,9 +37,9 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(154, 323);
+            this.btnExit.Location = new System.Drawing.Point(182, 287);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(58, 23);
             this.btnExit.TabIndex = 14;
             this.btnExit.Text = "Вийти";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -46,9 +47,9 @@
             // 
             // btnDeleteGoods
             // 
-            this.btnDeleteGoods.Location = new System.Drawing.Point(69, 23);
+            this.btnDeleteGoods.Location = new System.Drawing.Point(278, 99);
             this.btnDeleteGoods.Name = "btnDeleteGoods";
-            this.btnDeleteGoods.Size = new System.Drawing.Size(241, 61);
+            this.btnDeleteGoods.Size = new System.Drawing.Size(137, 36);
             this.btnDeleteGoods.TabIndex = 12;
             this.btnDeleteGoods.Text = "Видалити товар";
             this.btnDeleteGoods.UseVisualStyleBackColor = true;
@@ -56,9 +57,9 @@
             // 
             // btnAddGoods
             // 
-            this.btnAddGoods.Location = new System.Drawing.Point(69, 169);
+            this.btnAddGoods.Location = new System.Drawing.Point(12, 57);
             this.btnAddGoods.Name = "btnAddGoods";
-            this.btnAddGoods.Size = new System.Drawing.Size(241, 61);
+            this.btnAddGoods.Size = new System.Drawing.Size(137, 36);
             this.btnAddGoods.TabIndex = 11;
             this.btnAddGoods.Text = "Добавити товар";
             this.btnAddGoods.UseVisualStyleBackColor = true;
@@ -66,9 +67,9 @@
             // 
             // btnAddUser
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(69, 96);
+            this.btnAddUser.Location = new System.Drawing.Point(12, 99);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(241, 61);
+            this.btnAddUser.Size = new System.Drawing.Size(137, 36);
             this.btnAddUser.TabIndex = 10;
             this.btnAddUser.Text = "Добавити користувача";
             this.btnAddUser.UseVisualStyleBackColor = true;
@@ -78,13 +79,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 358);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(418, 322);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDeleteGoods);
             this.Controls.Add(this.btnAddGoods);
             this.Controls.Add(this.btnAddUser);
             this.Name = "AdminLogin";
-            this.Text = "AdminLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Панель управління";
             this.ResumeLayout(false);
 
         }

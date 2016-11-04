@@ -33,16 +33,17 @@ namespace Accounting_system.User
             userLogin.Show();
         }
 
-        public void Refresh()
+        private void Refresh()
         {
             IDRichTextBox.Clear();
             NameRichTextBox.Clear();
             quantityRichTextBox.Clear();
             SqlConnection connection = new SqlConnection(CRUD.connectionstring);
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Goods", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM HistoryShopping  WHERE IdUser = " + CRUD.userId.ToString(), connection);
+
             DataSet ds = new DataSet();
-            adapter.Fill(ds, "Goods");
-            foreach (DataRow dr in ds.Tables["Goods"].Rows)
+            adapter.Fill(ds, "GoodsUser");
+            foreach (DataRow dr in ds.Tables["GoodsUser"].Rows)
             {
                 IDRichTextBox.Text += dr["Id"] + "\n";
                 NameRichTextBox.Text += dr["Name"] + "\n";

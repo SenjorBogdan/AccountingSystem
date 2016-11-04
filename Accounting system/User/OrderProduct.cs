@@ -29,10 +29,13 @@ namespace Accounting_system.User
         private void btnOrder_Click(object sender, EventArgs e)
         {
             CRUD crud = new CRUD();
-            crud.OrderProduct(txtId.Text);
+            crud.OrderProduct(idTextBox.Text,quantityTextBox.Text);
             Refresh();
+            idTextBox.Text = "";
+            quantityTextBox.Text = "";
+
         }
-        public void Refresh()
+        private void Refresh()
         {
             IDRichTextBox.Clear();
             NameRichTextBox.Clear();
@@ -56,6 +59,15 @@ namespace Accounting_system.User
             {
                 e.Handled = true;
             }
+        }
+
+        private void quantityTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
         }
     }
 }

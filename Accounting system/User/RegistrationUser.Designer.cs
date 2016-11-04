@@ -34,26 +34,29 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnRegistration = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(76, 95);
+            this.txtLogin.Location = new System.Drawing.Point(316, 36);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(205, 20);
             this.txtLogin.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(76, 166);
+            this.txtPassword.Location = new System.Drawing.Point(316, 62);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(205, 20);
             this.txtPassword.TabIndex = 1;
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(161, 79);
+            this.lblLogin.Location = new System.Drawing.Point(258, 39);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(34, 13);
             this.lblLogin.TabIndex = 2;
@@ -62,7 +65,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(156, 150);
+            this.lblPassword.Location = new System.Drawing.Point(253, 65);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(45, 13);
             this.lblPassword.TabIndex = 3;
@@ -70,7 +73,7 @@
             // 
             // btnRegistration
             // 
-            this.btnRegistration.Location = new System.Drawing.Point(123, 219);
+            this.btnRegistration.Location = new System.Drawing.Point(316, 100);
             this.btnRegistration.Name = "btnRegistration";
             this.btnRegistration.Size = new System.Drawing.Size(109, 23);
             this.btnRegistration.TabIndex = 4;
@@ -80,7 +83,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(140, 286);
+            this.btnExit.Location = new System.Drawing.Point(446, 100);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 5;
@@ -88,11 +91,23 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Accounting_system.Properties.Resources.registration;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 183);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // RegistrationUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 321);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(535, 178);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRegistration);
             this.Controls.Add(this.lblPassword);
@@ -100,7 +115,9 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtLogin);
             this.Name = "RegistrationUser";
-            this.Text = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Реєстрація";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,5 +131,6 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnRegistration;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

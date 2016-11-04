@@ -23,8 +23,10 @@ namespace Accounting_system.User
         private void btnReturn_Click(object sender, EventArgs e)
         {
             CRUD crud = new CRUD();
-            crud.ReturnGoods(txtID.Text);
+            crud.ReturnGoods(idTextBox.Text,quantityTextBox.Text);
             Refresh();
+            idTextBox.Text = "";
+            quantityTextBox.Text = "";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace Accounting_system.User
             UserLogin userLogin = new UserLogin();
             userLogin.Show();
         }
-        public void Refresh()
+        private void Refresh()
         {
             IDRichTextBox.Clear();
             NameRichTextBox.Clear();
@@ -52,6 +54,14 @@ namespace Accounting_system.User
         }
 
         private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void quantityTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar))
             {

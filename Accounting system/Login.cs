@@ -20,7 +20,12 @@ namespace Accounting_system
         private void btnLogin_Click(object sender, EventArgs e)
         {
             CRUD crud = new CRUD();
-            crud.Ligin(txtLogin.Text,txtPassword.Text);
+            if (crud.Login(txtLogin.Text, txtPassword.Text) == true)
+            {
+                this.Hide();
+            }
+            txtLogin.Text = "";
+            txtPassword.Text = "";
         }
 
         private void btnRegistration_Click(object sender, EventArgs e)
@@ -28,6 +33,8 @@ namespace Accounting_system
             this.Hide();
             User.RegistrationUser registration = new User.RegistrationUser();
             registration.Show();
+            txtLogin.Text = "";
+            txtPassword.Text = "";
         }
     }
 }

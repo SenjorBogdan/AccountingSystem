@@ -23,8 +23,10 @@ namespace Accounting_system.Admin
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             CRUD crud = new CRUD();
-            crud.AddUser(txtId.Text,statusCheckBox.Checked);
+            crud.AddUser(txtId.Text, statusCheckBox.Checked);
             Refresh();
+            Refresh();
+            txtId.Text = "";
 
         }
 
@@ -37,8 +39,10 @@ namespace Accounting_system.Admin
         private void AddPrivileges_Click(object sender, EventArgs e)
         {
             CRUD crud = new CRUD();
-            crud.AddPrivileges(txtId.Text,privilegeCheckBox.Checked);
+            crud.AddPrivileges(txtId.Text, privilegeCheckBox.Checked);
             Refresh();
+            txtId.Text = "";
+
 
         }
 

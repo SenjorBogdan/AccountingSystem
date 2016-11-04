@@ -20,7 +20,13 @@ namespace Accounting_system.User
         private void btnRegistration_Click(object sender, EventArgs e)
         {
             CRUD crud = new CRUD();
-            crud.Registration(txtLogin.Text,txtPassword.Text);
+            if (crud.Registration(txtLogin.Text, txtPassword.Text) == true)
+            {
+                this.Hide();
+            }
+            txtLogin.Text = "";
+            txtPassword.Text = "";
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
